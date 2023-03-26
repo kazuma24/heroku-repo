@@ -51,6 +51,7 @@ def handle_message(event):
             {"role": "user", "content": event.message.text}
         ]   
     )
+    app.logger.info("chat GPT Responce: " + response)
     
     line_bot_api.reply_message(
         event.reply_token,
